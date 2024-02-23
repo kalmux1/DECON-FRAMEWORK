@@ -219,10 +219,12 @@ else
         "1") 
             # WHOIS ENUMRATION
             clear
+            echo " "
             dip_banner
             raw_WHOIS=$(whois $domain > asset/dmninf.txt)
             
             # DISPLAYING WHOIS INFORMATION
+            echo " "
             echo -e " $BIPurple                      WHOIS INFORMATION  $Normal"
             echo -e " $BIGreen    "
             cat asset/dmninf.txt
