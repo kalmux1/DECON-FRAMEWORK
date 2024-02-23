@@ -198,7 +198,10 @@ else
     dip_banner()
     {
         echo " "
+        echo " "
+        echo " "
         echo -e " $BIYellow     DOMAIN NAME :-$Normal $BICyan $domain  $Normal $BIYellow DOMAIN IP :-$Normal $BICyan $IP $Normal "
+        echo " "
         echo " "
     }
 
