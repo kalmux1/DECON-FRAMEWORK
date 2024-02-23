@@ -236,7 +236,19 @@ else
             ;;
         "2") 
             # WHATWEB
-            whatweb $domain
+            # WHOIS ENUMRATION
+            clear
+            # DOMAIN & IP BANNER
+            dip_banner
+            web_del=$(whatweb $domain > asset/webdel.txt)
+
+            # DISPLAYING WHOIS INFORMATION
+            echo " "
+            echo -e " $BIPurple                      DOMAIN STRUCTURE INFORMATION  $Normal"
+            echo -e " $BIGreen    "
+            cat asset/webdel.txt
+            echo -e " $Normal "
+
             ;;
         "3") 
             # NMAP HOST DISCOVERY & PORT ENUMRATAION
