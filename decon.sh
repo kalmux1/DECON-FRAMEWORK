@@ -197,7 +197,8 @@ else
     # DOMAIN & IP TOP BANNER
     dip_banner()
     {
-        echo -e " $BIYellow DOMAIN NAME :-$Normal $BICyan $domain  $Normal $BIYellow DOMAIN IP :-$Normal $BICyan $IP $Normal "
+        echo " "
+        echo -e " $BIYellow     DOMAIN NAME :-$Normal $BICyan $domain  $Normal $BIYellow DOMAIN IP :-$Normal $BICyan $IP $Normal "
         echo " "
     }
 
@@ -219,7 +220,7 @@ else
         "1") 
             # WHOIS ENUMRATION
             clear
-            echo " "
+            # DOMAIN & IP BANNER
             dip_banner
             raw_WHOIS=$(whois $domain > asset/dmninf.txt)
             
