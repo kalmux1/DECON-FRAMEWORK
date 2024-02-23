@@ -132,12 +132,12 @@ else
     echo -e "                   $BIPurple [+] AMASS OWASP"
     sleep 1.5 
 
-    #  AMASS PACKAGE 
-    amass_chk=$(which amass)
+    #  WHATWEB PACKAGE 
+    amass_chk=$(which whatweb)
     if [[ $? != 0 ]]
     then
         # Insatlling whois if not installed
-        pip=$(sudo apt-get install amass -y)   
+        pip=$(sudo apt-get install whatweb -y)   
         if [[ $? != 0 ]]
         then 
             echo -e " $BIRed DEPENDENCIES ERROR $Normal "
@@ -211,7 +211,7 @@ else
         echo " "
         echo " "
         echo -e "                        $Red  [1]$Normal $Purple WHOIS $Normal"
-        echo -e "                        $Red  [2]$Normal $Purple AMASS $Normal"
+        echo -e "                        $Red  [2]$Normal $Purple WHATWEB $Normal"
         echo -e "                        $Red  [3]$Normal $Purple NMAP $Normal"
         echo " "
         echo " "
@@ -235,7 +235,8 @@ else
             echo -e " $Normal "
             ;;
         "2") 
-            # AMASS
+            # WHATWEB
+            whatweb $domain
             ;;
         "3") 
             # NMAP HOST DISCOVERY & PORT ENUMRATAION
