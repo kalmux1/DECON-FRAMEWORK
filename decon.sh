@@ -275,8 +275,7 @@ else
             # DOMAIN & IP BANNER
             clear
             dip_banner
-            echo " "
-            echo " "
+          
 
             # WHATWEB
             web_del=$(whatweb $domain > asset/webdel.txt)
@@ -294,8 +293,7 @@ else
             # DOMAIN & IP BANNER
             clear
             dip_banner
-            echo " "
-            echo " "
+           
 
             # DNSENUM
             echo -e "                        $Red  [1]$Normal $BIPurple QUICK SCAN [ RECOMMENDED] $Normal"
