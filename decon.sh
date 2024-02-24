@@ -156,15 +156,16 @@ else
         fi
     fi 
 
-    echo -e "                   $BIPurple [+] DNSENUM"
+    
+    echo -e "                   $BIPurple [+] FFUF"
     sleep 1.5
 
-    #  DNSENUM PACKAGE
-    dnsenum_chk=$(which dnsenum)
+    #  FFUF PACKAGE
+    ffuf_chk=$(which ffuf)
     if [[ $? != 0 ]]
     then
         # Insatlling whois if not installed
-        pip=$(sudo apt-get install dnsenum -y)   
+        pip=$(sudo apt-get install ffuf -y)   
         if [[ $? != 0 ]]
         then 
             echo -e " $BIRed DEPENDENCIES ERROR $Normal "
@@ -217,17 +218,17 @@ else
             clear
         fi
     }
+
     # CALLING THE DOMAIN NAME VALIDATION FUNCTION
     dvld
     
-    echo " "
-    echo " "
     # IP EXTRACTION
     IP=$(awk 'NR==1{print $3}' asset/log.txt | sed 's/[\(\)]//g')
+
+
     # DOMAIN & IP TOP BANNER
     dip_banner()
     {
-        echo " "
         echo " "
         echo " "
         echo -e " $BIYellow     DOMAIN NAME :-$Normal $BICyan $domain  $Normal $BIYellow DOMAIN IP :-$Normal $BICyan $IP $Normal "
