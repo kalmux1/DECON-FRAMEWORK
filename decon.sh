@@ -1,6 +1,8 @@
-
 #!/bin/bash
+
 # This is a bash Script that you can use for DOMAIN RECONNESSINCE 
+# CODED BY NITIN JAISWAL AKA KALMUX
+
 
 # Colour Db
 # Reset
@@ -86,6 +88,8 @@ else
     echo " "
     echo " "
     sleep 0.7
+
+
     echo -e "                   $BIPurple [+] PING"
     sleep 1.5 
 
@@ -97,6 +101,8 @@ else
         echo " "
         exit 1
     fi 
+
+
     echo -e "                   $BIPurple [+] WHOIS"
     sleep 1.5
 
@@ -113,6 +119,8 @@ else
             exit 1
         fi
     fi 
+
+
     echo -e "                   $BIPurple [+] NAMP"
     sleep 1.5 
 
@@ -129,6 +137,8 @@ else
             exit 1
         fi
     fi 
+
+
     echo -e "                   $BIPurple [+] AMASS OWASP"
     sleep 1.5 
 
@@ -145,8 +155,28 @@ else
             exit 1
         fi
     fi 
+
+    echo -e "                   $BIPurple [+] DNSENUM"
+    sleep 1.5
+
+    #  DNSENUM PACKAGE
+    dnsenum_chk=$(which dnsenum)
+    if [[ $? != 0 ]]
+    then
+        # Insatlling whois if not installed
+        pip=$(sudo apt-get install dnsenum -y)   
+        if [[ $? != 0 ]]
+        then 
+            echo -e " $BIRed DEPENDENCIES ERROR $Normal "
+            echo " "
+            exit 1
+        fi
+    fi 
+
     sleep 2
     clear
+
+
     # DOMAIN NAME VALIDATION FUNCTION
     dvld()
     {
@@ -212,6 +242,7 @@ else
         echo " "
         echo -e "                        $Red  [1]$Normal $Purple WHOIS $Normal"
         echo -e "                        $Red  [2]$Normal $Purple WHATWEB $Normal"
+        echo -e "                        $Red  [3]$Normal $Purple DNSENUM $Normal"
         echo -e "                        $Red  [3]$Normal $Purple NMAP $Normal"
         echo " "
         echo " "
@@ -219,7 +250,9 @@ else
         read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' opt
         echo " "
         echo " "
+
         case $opt in 
+
         "1") 
             # WHOIS ENUMRATION
             clear
@@ -234,12 +267,15 @@ else
             cat asset/dmninf.txt
             echo -e " $Normal "
             ;;
+
         "2") 
-            # WHATWEB
-            # WHOIS ENUMRATION
-            clear
             # DOMAIN & IP BANNER
+            clear
             dip_banner
+            echo " "
+            echo " "
+
+            # WHATWEB
             web_del=$(whatweb $domain > asset/webdel.txt)
 
             # DISPLAYING WHOIS INFORMATION
@@ -250,9 +286,44 @@ else
             echo -e " $Normal "
 
             ;;
+
         "3") 
+            # DOMAIN & IP BANNER
+            clear
+            dip_banner
+            echo " "
+            echo " "
+
+            # DNSENUM
+            echo " "
+            echo " "
+            echo -e "                        $Red  [1]$Normal $Purple QUICK SCAN [ RECOMMENDED] $Normal"
+            echo -e "                        $Red  [2]$Normal $Purple AGGRESSIVE SCAN  $Normal"
+            echo " "
+            echo " "
+            echo " "
+            read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' choice
+            echo " "
+            echo " "
+
+            case $choice in 
+
+            "1")
+                clear
+                dnsenum --enum --noreverse $domain
+                ;;
+
+            "2")
+                clear
+                dnsenum $domain
+                ;;
+            esac
+
+            ;;
+        "4")
             # NMAP HOST DISCOVERY & PORT ENUMRATAION
             ;;
+
          *) 
            echo -e "$BIRed                INVALID OPTION $Normal"
            sleep 0.7
@@ -261,6 +332,7 @@ else
            dip_banner
            choice
            ;;
+
         esac
     }
     # MAIN FUNCTION CALLING
