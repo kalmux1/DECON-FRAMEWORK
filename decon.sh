@@ -248,7 +248,7 @@ else
         echo " "
         echo " "
         echo " "
-        read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' opt
+        read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' opt
         echo " "
         echo " "
 
@@ -331,12 +331,12 @@ else
             echo " "
 
             # FFUF DIRECTORY FUZZING
-            echo -e "                        $Red  [1]$Normal $BIPurple INBUILD  [ RECOMMENDED] $Normal"
-            echo -e "                        $Red  [2]$Normal $BIPurple CUSTOM SCAN  $Normal"
+            echo -e "                 $Red  [1]$Normal $BIPurple INBUILD  [ RECOMMENDED] $Normal"
+            echo -e "                 $Red  [2]$Normal $BIPurple CUSTOM SCAN  $Normal"
             echo " "
             echo " "
             echo " "
-            read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION FOR WORDLIST :- \033[0m' choice
+            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION FOR WORDLIST :- \033[0m' choice
             echo " "
             echo " "
 
