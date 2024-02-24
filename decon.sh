@@ -239,8 +239,7 @@ else
     # USER CHOICE IN { WHOIS | NMAP | AMASS }
     choice()
     {
-        echo " "
-        echo " "
+        # PACKAGE CHOICE 
         echo -e "                        $BIRed  [1]$Normal $BIPurple WHOIS $Normal"
         echo -e "                        $BIRed  [2]$Normal $BIPurple WHATWEB $Normal"
         echo -e "                        $BIRed  [3]$Normal $BIPurple DNSENUM $Normal"
@@ -334,8 +333,8 @@ else
             # FFUF DIRECTORY FUZZING
             echo " "
             echo " "
-            echo -e "                        $Red  [1]$Normal $Purple INBUILD  [ RECOMMENDED] $Normal"
-            echo -e "                        $Red  [2]$Normal $Purple CUSTOM SCAN  $Normal"
+            echo -e "                        $Red  [1]$Normal $BIPurple INBUILD  [ RECOMMENDED] $Normal"
+            echo -e "                        $Red  [2]$Normal $BIPurple CUSTOM SCAN  $Normal"
             echo " "
             echo " "
             echo " "
@@ -353,7 +352,7 @@ else
                 echo " "
                 
                 # WORDLISTS
-                echo -e "          $BIRed  [$]$Normal $BIYellow  WORDLISTS               WORDS $Normal"
+                echo -e "          $                 $BIYellow  WORDLISTS               WORDS $Normal"
                 echo " "
                 echo -e "          $BIRed  [1]$Normal $BIPurple WORDLIST 1.0            142168 $Normal"
                 echo -e "          $BIRed  [2]$Normal $BIPurple MEDIUM                  226054 $Normal"
@@ -363,7 +362,7 @@ else
                 echo " "
                 echo " "
                 echo " "
-                read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' opt
+                read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' wrdlist
                 echo " "
                 echo " "
                 ;;
