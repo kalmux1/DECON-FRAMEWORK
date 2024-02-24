@@ -90,7 +90,7 @@ else
     sleep 0.7
 
 
-    echo -e "                   $BIPurple [+] PING"
+    echo -e "                   $BIRed[+]$Normal$BIPurple PING $Normal"
     sleep 1.5 
 
     #  PING PACKAGE 
@@ -103,7 +103,7 @@ else
     fi 
 
 
-    echo -e "                   $BIPurple [+] WHOIS"
+    echo -e "                   $BIRed[+]$Normal$BIPurple WHOIS $Normal"
     sleep 1.5
 
     #  WHOIS PACKAGE
@@ -121,7 +121,7 @@ else
     fi 
 
 
-    echo -e "                   $BIPurple [+] NAMP"
+    echo -e "                   $BIRed[+]$Normal$BIPurple NMAP $Normal"
     sleep 1.5 
 
     #  NMAP PACKAGE
@@ -139,7 +139,7 @@ else
     fi 
 
 
-    echo -e "                   $BIPurple [+] WHATWEB"
+    echo -e "                   $BIRed[+]$Normal$BIPurple WHATWEB $Normal"
     sleep 1.5 
 
     #  WHATWEB PACKAGE 
@@ -157,7 +157,7 @@ else
     fi 
 
     
-    echo -e "                   $BIPurple [+] FFUF"
+    echo -e "                    $BIRed[+]$Normal$BIPurple FFUF $Normal"
     sleep 1.5
 
     #  FFUF PACKAGE
@@ -244,6 +244,7 @@ else
         echo -e "                        $BIRed  [1]$Normal $BIPurple WHOIS $Normal"
         echo -e "                        $BIRed  [2]$Normal $BIPurple WHATWEB $Normal"
         echo -e "                        $BIRed  [3]$Normal $BIPurple DNSENUM $Normal"
+        echo -e "                        $BIRed  [3]$Normal $BIPurple FFUF $Normal"
         echo -e "                        $BIRed  [3]$Normal $BIPurple NMAP $Normal"
         echo " "
         echo " "
@@ -254,6 +255,7 @@ else
 
         case $opt in 
 
+        # FIRST CASE FOR WHOIS
         "1") 
             # WHOIS ENUMRATION
             clear
@@ -269,6 +271,7 @@ else
             echo -e " $Normal "
             ;;
 
+        # SECOND CASE FOR WHATWEB
         "2") 
             # DOMAIN & IP BANNER
             clear
@@ -287,6 +290,7 @@ else
 
             ;;
 
+        # THIRD CASE FOR DNSENUM
         "3") 
             # DOMAIN & IP BANNER
             clear
@@ -320,10 +324,58 @@ else
             esac
 
             ;;
+
+        # FOURTH CASE FOR FFUF
         "4")
+            # DOMAIN & IP BANNER
+            clear
+            dip_banner
+            echo " "
+            echo " "
+
+            # FFUF DIRECTORY FUZZING
+            echo " "
+            echo " "
+            echo -e "                        $Red  [1]$Normal $Purple INBUILD  [ RECOMMENDED] $Normal"
+            echo -e "                        $Red  [2]$Normal $Purple CUSTOM SCAN  $Normal"
+            echo " "
+            echo " "
+            echo " "
+            read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION FOR WORDLIST :- \033[0m' choice
+            echo " "
+            echo " "
+
+            case $choice in
+
+            "1")
+                echo " "
+                echo " "
+                echo -e "          $BIRed  [$]$Normal $BIPurple  WORDLISTS               WORDS $Normal"
+                echo " "
+                echo -e "          $BIRed  [1]$Normal $BIPurple WORDLIST 1.0            142168 $Normal"
+                echo -e "          $BIRed  [2]$Normal $BIPurple MEDIUM                  226054 $Normal"
+                echo -e "          $BIRed  [3]$Normal $BIPurple SMALL                   87912 $Normal"
+                echo -e "          $BIRed  [3]$Normal $BIPurple LOWECASE MEDIUM         207698 $Normal"
+                echo -e "          $BIRed  [3]$Normal $BIPurple LOWECASE SMALL          81698 $Normal"
+                echo " "
+                echo " "
+                echo " "
+                read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' opt
+                echo " "
+                echo " "
+                ;;
+            "2")
+                ;;
+
+            ;;
+
+        # FIFTH CASE FOR NMAP    
+        "5")
             # NMAP HOST DISCOVERY & PORT ENUMRATAION
             ;;
 
+
+        # DEFAULT CASE FOR REST     
          *) 
            echo -e "$BIRed                INVALID OPTION $Normal"
            sleep 0.7
