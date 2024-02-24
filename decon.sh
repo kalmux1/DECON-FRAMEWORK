@@ -325,8 +325,7 @@ else
             # DOMAIN & IP BANNER
             clear
             dip_banner
-            echo " "
-            echo " "
+            
 
             # FFUF DIRECTORY FUZZING
             echo -e "                 $Red  [1]$Normal $BIPurple INBUILD  [ RECOMMENDED] $Normal"
