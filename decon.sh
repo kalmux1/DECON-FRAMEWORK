@@ -157,7 +157,7 @@ else
     fi 
 
     
-    echo -e "                    $BIRed[+]$Normal$BIPurple FFUF $Normal"
+    echo -e "                   $BIRed[+]$Normal$BIPurple FFUF $Normal"
     sleep 1.5
 
     #  FFUF PACKAGE
