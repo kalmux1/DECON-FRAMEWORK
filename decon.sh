@@ -139,7 +139,7 @@ else
     fi 
 
 
-    echo -e "                   $BIPurple [+] AMASS OWASP"
+    echo -e "                   $BIPurple [+] WHATWEB"
     sleep 1.5 
 
     #  WHATWEB PACKAGE 
