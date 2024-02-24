@@ -244,8 +244,8 @@ else
         echo -e "                        $BIRed  [1]$Normal $BIPurple WHOIS $Normal"
         echo -e "                        $BIRed  [2]$Normal $BIPurple WHATWEB $Normal"
         echo -e "                        $BIRed  [3]$Normal $BIPurple DNSENUM $Normal"
-        echo -e "                        $BIRed  [3]$Normal $BIPurple FFUF $Normal"
-        echo -e "                        $BIRed  [3]$Normal $BIPurple NMAP $Normal"
+        echo -e "                        $BIRed  [4]$Normal $BIPurple FFUF $Normal"
+        echo -e "                        $BIRed  [5]$Normal $BIPurple NMAP $Normal"
         echo " "
         echo " "
         echo " "
@@ -299,10 +299,8 @@ else
             echo " "
 
             # DNSENUM
-            echo " "
-            echo " "
-            echo -e "                        $Red  [1]$Normal $Purple QUICK SCAN [ RECOMMENDED] $Normal"
-            echo -e "                        $Red  [2]$Normal $Purple AGGRESSIVE SCAN  $Normal"
+            echo -e "                        $Red  [1]$Normal $BIPurple QUICK SCAN [ RECOMMENDED] $Normal"
+            echo -e "                        $Red  [2]$Normal $BIPurple AGGRESSIVE SCAN  $Normal"
             echo " "
             echo " "
             echo " "
