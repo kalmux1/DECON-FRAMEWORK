@@ -269,7 +269,7 @@ else
             echo -e " $BIGreen    "
             cat asset/dmninf.txt
             echo -e " $Normal "
-            ;;
+        ;;
 
         # SECOND CASE FOR WHATWEB
         "2") 
@@ -288,7 +288,7 @@ else
             cat asset/webdel.txt
             echo -e " $Normal "
 
-            ;;
+        ;;
 
         # THIRD CASE FOR DNSENUM
         "3") 
@@ -323,7 +323,7 @@ else
                 ;;
             esac
 
-            ;;
+        ;;
 
         # FOURTH CASE FOR FFUF
         "4")
@@ -366,8 +366,8 @@ else
                 ;;
             "2")
                 ;;
-
-            ;;
+            esac
+        ;;
 
         # FIFTH CASE FOR NMAP    
         "5")
