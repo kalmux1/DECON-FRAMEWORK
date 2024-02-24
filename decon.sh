@@ -236,7 +236,7 @@ else
         echo " "
     }
 
-    # USER CHOICE IN { WHOIS | NMAP | AMASS }
+    # USER CHOICE IN { WHOIS | WHATWEB | DNSENUM | FFUF | NMAP }
     choice()
     {
         # PACKAGE CHOICE 
@@ -316,6 +316,15 @@ else
                 clear
                 dnsenum $domain
                 ;;
+
+            *) 
+                echo -e "$BIRed                INVALID OPTION $Normal"
+                sleep 0.7
+                clear
+                echo " "
+                dip_banner
+                choice
+                ;;  
             esac
 
         ;;
@@ -363,6 +372,16 @@ else
                 ;;
             "2")
                 ;;
+
+            # DEFAULT CASE FOR REST     
+            *) 
+                echo -e "$BIRed                INVALID OPTION $Normal"
+                sleep 0.7
+                clear
+                echo " "
+                dip_banner
+                choice
+                ;;    
             esac
         ;;
 
