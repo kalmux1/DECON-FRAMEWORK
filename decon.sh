@@ -331,8 +331,6 @@ else
             echo " "
 
             # FFUF DIRECTORY FUZZING
-            echo " "
-            echo " "
             echo -e "                        $Red  [1]$Normal $BIPurple INBUILD  [ RECOMMENDED] $Normal"
             echo -e "                        $Red  [2]$Normal $BIPurple CUSTOM SCAN  $Normal"
             echo " "
@@ -352,7 +350,7 @@ else
                 echo " "
                 
                 # WORDLISTS
-                echo -e "          $                 $BIYellow  WORDLISTS               WORDS $Normal"
+                echo -e "                            $BIYellow  WORDLISTS               WORDS $Normal"
                 echo " "
                 echo -e "          $BIRed  [1]$Normal $BIPurple WORDLIST 1.0            142168 $Normal"
                 echo -e "          $BIRed  [2]$Normal $BIPurple MEDIUM                  226054 $Normal"
