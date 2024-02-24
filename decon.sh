@@ -346,9 +346,14 @@ else
             case $choice in
 
             "1")
+                # DOMAIN & IP BANNER
+                clear
+                dip_banner
                 echo " "
                 echo " "
-                echo -e "          $BIRed  [$]$Normal $BIPurple  WORDLISTS               WORDS $Normal"
+                
+                # WORDLISTS
+                echo -e "          $BIRed  [$]$Normal $BIYellow  WORDLISTS               WORDS $Normal"
                 echo " "
                 echo -e "          $BIRed  [1]$Normal $BIPurple WORDLIST 1.0            142168 $Normal"
                 echo -e "          $BIRed  [2]$Normal $BIPurple MEDIUM                  226054 $Normal"
