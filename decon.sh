@@ -477,14 +477,22 @@ else
 
                 # CUSTOM WORDLIST FUZZING 
                 read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mENTER THE PATH OF YOUR WORDLIST :- \033[0m' wrdlist_pth
-                find $wrdlist_pth
+                wrdlist_vld=$(find $wrdlist_pth)
                 if [[ $? != 0 ]]
                 then 
                     echo -e " $BIRed WORDLIST DOES NOT EXIST $Normal"
                     sleep 0.7
                     exit 1
                 else
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
+                    # FUZZING USING CUSTOM WORDLIST
+                    echo -e "$BIGreen  "
                     ffuf -w $wrdlist_pth -u $domain/FUZZ
+                    echo -e "$Normal  "
                 fi
             ;;
 
