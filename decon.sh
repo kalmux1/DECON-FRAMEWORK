@@ -201,7 +201,9 @@ else
     {
         echo " "
         echo " "
-        read -e -p $'\033[1;93m Enter A Valid Domain Name :- \033[0m' domain
+        echo -e " ENTER A VALID DOMAIN IN THE FORMAT { http://_______ | https://_______}"
+        echo " "
+        read -e -p $'\033[1;93m ========> \033[0m' domain
         echo " "
         echo " "
         chars="/-\|"  
