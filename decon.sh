@@ -216,7 +216,7 @@ else
             kill $animation_pid >/dev/null 2>&1
             echo -e "\033[K"
             echo -e " $BIGreen      VALID DOMAIN $Normal "
-            ping_store=$(ping -c 1 $domain > asset/log.txt)
+            ping_store=$(ping -c 1 $url > asset/log.txt)
             sleep 2
             clear
         fi
@@ -385,7 +385,9 @@ else
                     echo " "
 
                     # WORDLIST 1.0
+                    echo "$BIGreen"
                     ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain/FUZZ
+                    echo "$Normal"
                     ;;
 
                 "2")
