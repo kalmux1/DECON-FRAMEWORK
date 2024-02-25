@@ -339,7 +339,7 @@ else
 
             # FFUF DIRECTORY FUZZING
             echo " "
-            echo -e "                 $Red  [1]$Normal $BIPurple INBUILD  [ RECOMMENDED] $Normal"
+            echo -e "                 $Red  [1]$Normal $BIPurple INBUILD SCAN [ RECOMMENDED] $Normal"
             echo -e "                 $Red  [2]$Normal $BIPurple CUSTOM SCAN  $Normal"
             echo " "
             echo " "
@@ -362,8 +362,8 @@ else
                 echo -e "          $BIRed  [1]$Normal $BIPurple WORDLIST 1.0            142168 $Normal"
                 echo -e "          $BIRed  [2]$Normal $BIPurple MEDIUM                  226054 $Normal"
                 echo -e "          $BIRed  [3]$Normal $BIPurple SMALL                   87912 $Normal"
-                echo -e "          $BIRed  [3]$Normal $BIPurple LOWECASE MEDIUM         207698 $Normal"
-                echo -e "          $BIRed  [3]$Normal $BIPurple LOWECASE SMALL          81698 $Normal"
+                echo -e "          $BIRed  [4]$Normal $BIPurple LOWECASE MEDIUM         207698 $Normal"
+                echo -e "          $BIRed  [5]$Normal $BIPurple LOWECASE SMALL          81698 $Normal"
                 echo " "
                 echo " "
                 echo " "
@@ -383,7 +383,33 @@ else
 
                     # WORDLIST 1.0
                     ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain
-                ;;
+                    ;;
+
+                "2")
+                    ;;
+
+                "3")
+                    ;;
+
+                "4")
+                    ;;
+
+                "5")
+                    ;;
+
+                # DEFAULT CASE FOR REST     
+                *) 
+                    echo -e "$BIRed                INVALID OPTION $Normal"
+                    sleep 0.7
+                    clear
+                    echo " "
+                    dip_banner
+                    choice
+                    ;; 
+                esac
+            ;;
+
+
             "2")
                 ;;
 
@@ -406,7 +432,7 @@ else
 
 
         # DEFAULT CASE FOR REST     
-         *) 
+        *) 
            echo -e "$BIRed                INVALID OPTION $Normal"
            sleep 0.7
            clear
