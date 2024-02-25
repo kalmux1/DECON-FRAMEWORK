@@ -240,6 +240,7 @@ else
     choice()
     {
         # PACKAGE CHOICE 
+        echo " "
         echo -e "                        $BIRed  [1]$Normal $BIPurple WHOIS $Normal"
         echo -e "                        $BIRed  [2]$Normal $BIPurple WHATWEB $Normal"
         echo -e "                        $BIRed  [3]$Normal $BIPurple DNSENUM $Normal"
