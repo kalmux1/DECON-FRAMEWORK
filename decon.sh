@@ -397,9 +397,9 @@ else
                     echo " "
 
                     # WORDLIST MEDIUM
-                    echo "$BIGreen  "
+                    echo -e "$BIGreen  "
                     ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $domain/FUZZ
-                    echo "$Normal  "
+                    echo -e "$Normal  "
                     ;;
 
                 "3")
@@ -409,9 +409,9 @@ else
                     echo " "
 
                     # WORDLIST SMALL
-                    echo "$BIGreen  "
+                    echo -e "$BIGreen  "
                     ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u $domain/FUZZ
-                    echo "$Normal  "
+                    echo -e "$Normal  "
                     ;;
 
                 "4")
@@ -421,9 +421,9 @@ else
                     echo " "
 
                     # WORDLIST LOWERCASE MEDIUM
-                    echo "$BIGreen  "
+                    echo -e "$BIGreen  "
                     ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -u $domain/FUZZ
-                    echo "$Normal  "
+                    echo -e "$Normal  "
                     ;;
 
                 "5")
@@ -433,9 +433,9 @@ else
                     echo " "
 
                     # WORDLIST LOWERCASE SMALL
-                    echo "$BIGreen  "
+                    echo -e "$BIGreen  "
                     ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -u $domain/FUZZ
-                    echo "$Normal  "
+                    echo -e "$Normal  "
                     ;;
 
                 # DEFAULT CASE FOR REST     
