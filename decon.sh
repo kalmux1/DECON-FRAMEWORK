@@ -385,9 +385,9 @@ else
                     echo " "
 
                     # WORDLIST 1.0
-                    echo "$BIGreen  "
+                    echo -e "$BIGreen  "
                     ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain/FUZZ
-                    echo "$Normal  "
+                    echo -e "$Normal  "
                     ;;
 
                 "2")
