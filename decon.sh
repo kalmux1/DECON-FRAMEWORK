@@ -382,7 +382,7 @@ else
                     echo " "
 
                     # WORDLIST 1.0
-                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain
+                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain/FUZZ
                     ;;
 
                 "2")
