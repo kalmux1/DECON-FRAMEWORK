@@ -201,9 +201,9 @@ else
     {
         echo " "
         echo " "
-        echo -e "$BIYellow ENTER A VALID DOMAIN IN THE FORMAT { http://_______ | https://_______ $Normal}"
+        echo -e "$BIYellow      ENTER A VALID DOMAIN IN THE FORMAT { http://_______ | https://_______ }$Normal"
         echo " "
-        read -e -p $'\033[1;93m ========> \033[0m' domain
+        read -e -p $'\033[1;93m      ========> \033[0m' domain
         echo " "
         echo " "
         chars="/-\|"  
