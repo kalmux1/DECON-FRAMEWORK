@@ -201,7 +201,7 @@ else
     {
         echo " "
         echo " "
-        echo -e "$BICyan      ENTER A VALID DOMAIN IN THE FORMAT $Normal{$BIYellow http://_______ | https://_______$Normal $BICyan}$Normal"
+        echo -e "$BICyan      ENTER A VALID DOMAIN IN THE FORMAT {$Normal$BIYellow http://_______ | https://_______$Normal $BICyan}$Normal"
         echo " "
         read -e -p $'\033[1;91m      ========> \033[0m' domain
         echo " "
