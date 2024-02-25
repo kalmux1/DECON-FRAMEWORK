@@ -335,7 +335,7 @@ else
             # DOMAIN & IP BANNER
             clear
             dip_banner
-            
+            echo " "
 
             # FFUF DIRECTORY FUZZING
             echo " "
@@ -370,6 +370,19 @@ else
                 read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' wrdlist
                 echo " "
                 echo " "
+
+                # INBUID WORDLIST FUZZING 
+
+                case $wrdlist in 
+
+                "1")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
+                    # WORDLIST 1.0
+                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain
                 ;;
             "2")
                 ;;
