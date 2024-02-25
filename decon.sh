@@ -197,8 +197,11 @@ else
         ) &     
         animation_pid=$!
 
+        # MAIN URL EXTRACTION FOR HOST CHECKING
+        url=$(echo "$domain" | sed -E 's/https?:\/\/([^\/]+).*/\1/')
+
         # PINGING TO THE DOMAIN TO GET THE IPv4 ADDRESS
-        ping=$(ping -4 -c 1 $domain)
+        ping=$(ping -4 -c 1 $url)
         if [[ $? != 0 ]]
         then
             kill $animation_pid >/dev/null 2>&1
