@@ -331,12 +331,12 @@ else
 
             "1")
                 clear
-                dnsenum --enum --noreverse $domain
+                dnsenum --enum --noreverse $url
                 ;;
 
             "2")
                 clear
-                dnsenum $domain
+                dnsenum $url
                 ;;
 
             *) 
