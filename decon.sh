@@ -385,21 +385,57 @@ else
                     echo " "
 
                     # WORDLIST 1.0
-                    echo "$BIGreen"
+                    echo "$BIGreen  "
                     ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain/FUZZ
-                    echo "$Normal"
+                    echo "$Normal  "
                     ;;
 
                 "2")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
+                    # WORDLIST MEDIUM
+                    echo "$BIGreen  "
+                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $domain/FUZZ
+                    echo "$Normal  "
                     ;;
 
                 "3")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
+                    # WORDLIST SMALL
+                    echo "$BIGreen  "
+                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u $domain/FUZZ
+                    echo "$Normal  "
                     ;;
 
                 "4")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
+                    # WORDLIST LOWERCASE MEDIUM
+                    echo "$BIGreen  "
+                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -u $domain/FUZZ
+                    echo "$Normal  "
                     ;;
 
                 "5")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
+                    # WORDLIST LOWERCASE SMALL
+                    echo "$BIGreen  "
+                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -u $domain/FUZZ
+                    echo "$Normal  "
                     ;;
 
                 # DEFAULT CASE FOR REST     
