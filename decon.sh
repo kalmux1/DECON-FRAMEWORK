@@ -284,7 +284,7 @@ else
             clear
             # DOMAIN & IP BANNER
             dip_banner
-            raw_WHOIS=$(whois $domain > asset/dmninf.txt)
+            raw_WHOIS=$(whois $url > asset/dmninf.txt)
             
             # DISPLAYING WHOIS INFORMATION
             echo " "
