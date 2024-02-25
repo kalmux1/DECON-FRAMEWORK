@@ -111,7 +111,7 @@ else
     if [[ $? != 0 ]]
     then
         # Insatlling whois if not installed
-        pip=$(sudo apt-get install whois -y)   
+        pkg=$(sudo apt-get install whois -y)   
         if [[ $? != 0 ]]
         then 
             echo -e " $BIRed DEPENDENCIES ERROR $Normal "
@@ -129,7 +129,7 @@ else
     if [[ $? != 0 ]]
     then
         # Insatlling nmap if not installed
-        pip=$(sudo apt-get install nmap -y)   
+        pkg=$(sudo apt-get install nmap -y)   
         if [[ $? != 0 ]]
         then 
             echo -e " $BIRed DEPENDENCIES ERROR $Normal "
@@ -143,11 +143,11 @@ else
     sleep 1.5 
 
     #  WHATWEB PACKAGE 
-    amass_chk=$(which whatweb)
+    whatweb_chk=$(which whatweb)
     if [[ $? != 0 ]]
     then
         # Insatlling whois if not installed
-        pip=$(sudo apt-get install whatweb -y)   
+        pkg=$(sudo apt-get install whatweb -y)   
         if [[ $? != 0 ]]
         then 
             echo -e " $BIRed DEPENDENCIES ERROR $Normal "
@@ -165,7 +165,25 @@ else
     if [[ $? != 0 ]]
     then
         # Insatlling whois if not installed
-        pip=$(sudo apt-get install ffuf -y)   
+        pkg=$(sudo apt-get install ffuf -y)   
+        if [[ $? != 0 ]]
+        then 
+            echo -e " $BIRed DEPENDENCIES ERROR $Normal "
+            echo " "
+            exit 1
+        fi
+    fi 
+
+
+    echo -e "                   $BIRed[+]$Normal$BIPurple WORDLISTS $Normal"
+    sleep 1.5
+
+    #  FFUF PACKAGE
+    dirbuster_chk=$(which dirbuster)
+    if [[ $? != 0 ]]
+    then
+        # Insatlling whois if not installed
+        pkg=$(sudo apt-get install dirbuster -y)   
         if [[ $? != 0 ]]
         then 
             echo -e " $BIRed DEPENDENCIES ERROR $Normal "
@@ -470,7 +488,7 @@ else
                 fi
             ;;
 
-            
+
             # DEFAULT CASE FOR REST     
             *) 
                 echo -e "$BIRed                INVALID OPTION $Normal"
