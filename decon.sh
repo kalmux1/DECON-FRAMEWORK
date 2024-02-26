@@ -178,7 +178,7 @@ else
     echo -e "                   $BIRed[+]$Normal$BIPurple WORDLISTS $Normal"
     sleep 1.5
 
-    #  FFUF PACKAGE
+    #  WORDLIST PACKAGE
     dirbuster_chk=$(which dirbuster)
     if [[ $? != 0 ]]
     then
@@ -371,9 +371,35 @@ else
             echo " "
             echo " "
 
+            ffuf_fil()
+            {
+                # DOMAIN & IP BANNER
+                clear
+                dip_banner
+                echo " "
+
+
+                # FFUF FILTER
+                echo " "
+                echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
+                echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
+                echo -e "                 $Red  [2]$Normal $BIPurple 400  $Normal"
+                echo -e "                 $Red  [2]$Normal $BIPurple 500  $Normal"
+                echo -e "                 $Red  [2]$Normal $BIPurple ALL  $Normal"
+                echo " "
+                echo " "
+                echo " "
+                read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION FOR WORDLIST :- \033[0m' filchoice
+                echo " "
+                echo " "
+                clear
+            }
+
+
             case $choice in
 
             "1")
+
                 # DOMAIN & IP BANNER
                 clear
                 dip_banner
@@ -479,6 +505,7 @@ else
 
                 # CUSTOM WORDLIST FUZZING 
                 read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mENTER THE PATH OF YOUR WORDLIST :- \033[0m' wrdlist_pth
+
                 wrdlist_vld=$(find $wrdlist_pth)
                 if [[ $? != 0 ]]
                 then 
