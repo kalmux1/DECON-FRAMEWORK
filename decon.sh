@@ -280,10 +280,11 @@ else
 
         # FIRST CASE FOR WHOIS
         "1") 
-            # WHOIS ENUMRATION
-            clear
             # DOMAIN & IP BANNER
+            clear
             dip_banner
+            echo " "
+            # WHOIS ENUMRATION
             raw_WHOIS=$(whois $url > asset/dmninf.txt)
             
             # DISPLAYING WHOIS INFORMATION
