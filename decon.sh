@@ -540,7 +540,7 @@ else
                     esac
             ;;
 
-
+            # NO FILTER CASE FOR FFUF
 
             "N | n | no | NO")
 
@@ -681,7 +681,10 @@ else
                         dip_banner
                         choice
                     ;;    
-                    esac
+                esac
+            ;;
+        ;;
+        esac
     }
     # MAIN FUNCTION CALLING
     dip_banner # BANNER FOR DOMAIN NAME AND IP ADDRESS
