@@ -785,7 +785,25 @@ else
             echo -e " $BIGreen    "
             amass enum -d $url
             echo -e " $Normal "
+        ;;
 
+        # SEVENTH CASE FOR NS LOOKUP
+        "7")
+            # DOMAIN & IP BANNER
+            clear
+            dip_banner
+            echo " "
+        ;;
+
+        *)
+            # DEFAULT CASE FOR REST 
+            echo -e "$BIRed                INVALID OPTION $Normal"
+            sleep 0.7
+            clear
+            echo " "
+            dip_banner
+            choice
+        ;;    
         esac
     }
     # MAIN FUNCTION CALLING
