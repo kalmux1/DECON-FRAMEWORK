@@ -192,6 +192,24 @@ else
         fi
     fi 
 
+
+    echo -e "                   $BIRed[+]$Normal$BIPurple NIKTO $Normal"
+    sleep 1.5
+
+    #  WORDLIST PACKAGE
+    nikto_chk=$(which nikto)
+    if [[ $? != 0 ]]
+    then
+        # Insatlling whois if not installed
+        pkg=$(sudo apt-get install nikto -y)   
+        if [[ $? != 0 ]]
+        then 
+            echo -e " $BIRed DEPENDENCIES ERROR $Normal "
+            echo " "
+            exit 1
+        fi
+    fi 
+
     sleep 2
     clear
 
@@ -268,7 +286,8 @@ else
         echo -e "                        $BIRed  [2]$Normal $BIPurple WHATWEB $Normal"
         echo -e "                        $BIRed  [3]$Normal $BIPurple DNSENUM $Normal"
         echo -e "                        $BIRed  [4]$Normal $BIPurple FFUF $Normal"
-        echo -e "                        $BIRed  [5]$Normal $BIPurple NMAP $Normal"
+        echo -e "                        $BIRed  [5]$Normal $BIPurple NIKTO $Normal"
+        echo -e "                        $BIRed  [6]$Normal $BIPurple NMAP $Normal"
         echo " "
         echo " "
         echo " "
@@ -684,7 +703,23 @@ else
                 esac
                 ;;
             esac
-            ;;
+        ;;
+
+        # FIFTH CASE FOR NIKTO
+        "5")
+           # DOMAIN & IP BANNER
+            clear
+            dip_banner
+            echo " "
+            
+            # DISPLAYING NIKTO INFORMATION
+            echo " "
+            echo -e " $BIPurple                      NIKTO INFORMATION  $Normal"
+            echo -e " $BIGreen    "
+            nikto -h $domain
+            echo -e " $Normal "
+        ;;
+
         esac
     }
     # MAIN FUNCTION CALLING
