@@ -538,7 +538,7 @@ else
                         choice
                     ;;    
                     esac
-            ;;
+                ;;
 
             # NO FILTER CASE FOR FFUF
 
@@ -682,7 +682,8 @@ else
                         choice
                     ;;    
                 esac
-            ;;
+                ;;
+            esac
         ;;
         esac
     }
