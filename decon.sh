@@ -684,7 +684,7 @@ else
                 esac
                 ;;
             esac
-        ;;
+            ;;
         esac
     }
     # MAIN FUNCTION CALLING
