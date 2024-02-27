@@ -820,6 +820,16 @@ else
                     ;;    
                 esac
                 ;;
+
+                *)
+                    # DEFAULT CASE FOR REST 
+                    echo -e "$BIRed                INVALID OPTION $Normal"
+                    sleep 0.7
+                    clear
+                    echo " "
+                    dip_banner
+                    choice
+                ;;    
             esac
         ;;
 
