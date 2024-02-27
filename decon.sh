@@ -760,7 +760,7 @@ else
 
                                 # FUZZING USING CUSTOM WORDLIST
                                 echo -e "$BIGreen  "
-                                ffuf -w $wrdlist_pth -u $domain/FUZZ -mc $filchoice
+                                ffuf -w $wrdlist_pth -u $domain/FUZZ -mc $filter
                                 echo -e "$Normal  "
                             fi
                         ;;
