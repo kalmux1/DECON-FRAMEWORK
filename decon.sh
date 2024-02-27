@@ -384,7 +384,7 @@ else
 
             case $fil_opt in 
 
-                "Y | y | yes | YES")
+                "y")
                     # FFUF FILTER
                     echo " "
                     echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
@@ -542,7 +542,7 @@ else
 
             # NO FILTER CASE FOR FFUF
 
-            "N | n | no | NO")
+            "n")
 
                 case $choice in
 
