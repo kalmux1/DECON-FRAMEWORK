@@ -672,6 +672,11 @@ else
                                         ;; 
                                     esac    
                                 ;;
+                    esac
+
+                ;;
+                
+                   
                 "2")
 
                     # DOMAIN & IP BANNER
