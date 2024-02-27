@@ -364,7 +364,7 @@ else
             echo " "
             echo " "
             echo " "
-            read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' choice
+            read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' scan_choice
             echo " "
             echo " "
 
@@ -410,71 +410,73 @@ else
             echo " "
             echo " "
 
-            # DOMAIN & IP BANNER
-            clear
-            dip_banner
-            echo " "
+            
 
+            case $scan_choice in
 
-            # FILTER CHOOSING OPTION - YES OR NO 
-            echo " "
-            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mDO YOU WANT TO USE FILTERS FOR STATUS CODES [\033[0m\033[1;95m y \033[1;94m|\033[0m \033[1;95mn\033[0m \033[1;94m]:-  :- \033[0m' fil_opt
-
-            case $fil_opt in 
-
-                "y")
-                    # FFUF FILTER
-                    clear
+                "1")
                     # DOMAIN & IP BANNER
                     clear
                     dip_banner
+                    echo " "
 
-                    # FILTER CHOICES
-                    echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
-                    echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
-                    echo -e "                 $Red  [3]$Normal $BIPurple 400  $Normal"
-                    echo -e "                 $Red  [4]$Normal $BIPurple 500  $Normal"
-                    echo -e "                 $Red  [5]$Normal $BIPurple ALL  $Normal"
+
+                    # FILTER CHOOSING OPTION - YES OR NO 
                     echo " "
-                    echo " "
-                    echo " "
-                    read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE FILTER FOR STATUS CODE :- \033[0m' filchoice
-                    echo " "
-                    echo " "
+                    read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mDO YOU WANT TO USE FILTERS FOR STATUS CODES [\033[0m\033[1;95m y \033[1;94m|\033[0m \033[1;95mn\033[0m \033[1;94m]:-  :- \033[0m' fil_opt
+
+                    case $fil_opt in 
+
+                        "y")
+                            # FFUF FILTER
+                            clear
+                            # DOMAIN & IP BANNER
+                            clear
+                            dip_banner
+
+                            # FILTER CHOICES
+                            echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
+                            echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
+                            echo -e "                 $Red  [3]$Normal $BIPurple 400  $Normal"
+                            echo -e "                 $Red  [4]$Normal $BIPurple 500  $Normal"
+                            echo -e "                 $Red  [5]$Normal $BIPurple ALL  $Normal"
+                            echo " "
+                            echo " "
+                            echo " "
+                            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE FILTER FOR STATUS CODE :- \033[0m' filchoice
+                            echo " "
+                            echo " "
                     
-                    case $filchoice in 
-                        "1")
-                            filter="200"
-                        ;;
+                            case $filchoice in 
+                                "1")
+                                    filter="200"
+                                ;;
 
-                        "2")
-                            filter="300"
-                        ;;
+                                "2")
+                                    filter="300"
+                                ;;
 
-                        "3")
-                            filter="400"
-                        ;;
+                                "3")
+                                    filter="400"
+                                ;;
 
-                        "4")
-                            filter="500"
-                        ;;
+                                "4")
+                                    filter="500"
+                                ;;
 
-                        "5")
-                            filter="200-209,300,400,500"
-                        ;;
+                                "5")
+                                    filter="200-209,300,400,500"
+                                ;;
 
-                        *) 
-                            # DEFAULT CASE FOR REST
-                            echo -e "$BIRed                INVALID OPTION $Normal"
-                            sleep 0.7
-                            exit 1
-                        ;; 
-                    esac
+                                *) 
+                                    # DEFAULT CASE FOR REST
+                                    echo -e "$BIRed                INVALID OPTION $Normal"
+                                    sleep 0.7
+                                    exit 1
+                                ;; 
+                            esac
 
-                    case $choice in
-
-                    "1")
-                        # DOMAIN & IP BANNER
+                            # DOMAIN & IP BANNER
                             clear
                             dip_banner
                             echo " "
@@ -568,52 +570,116 @@ else
                                     choice
                                 ;; 
                             esac
-                
-                    ;;
+                            ;;
 
-                    "2")
-                        # DOMAIN & IP BANNER
-                        clear
-                        dip_banner
-                        echo " "
+                "2")
 
-                        # CUSTOM WORDLIST FUZZING 
-                        read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mENTER THE PATH OF YOUR WORDLIST :- \033[0m' wrdlist_pth 
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
 
-                        wrdlist_vld=$(find $wrdlist_pth)
-                        if [[ $? != 0 ]]
-                        then 
-                            echo -e " $BIRed WORDLIST DOES NOT EXIST $Normal"
-                            sleep 0.7
-                            exit 1
-                        else
+
+                    # FILTER CHOOSING OPTION - YES OR NO 
+                    echo " "
+                    read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mDO YOU WANT TO USE FILTERS FOR STATUS CODES [\033[0m\033[1;95m y \033[1;94m|\033[0m \033[1;95mn\033[0m \033[1;94m]:-  :- \033[0m' fil_opt
+
+                    case $fil_opt in 
+
+                        "y")
+                            # FFUF FILTER
+                            clear
+                            # DOMAIN & IP BANNER
+                            clear
+                            dip_banner
+
+                            # FILTER CHOICES
+                            echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
+                            echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
+                            echo -e "                 $Red  [3]$Normal $BIPurple 400  $Normal"
+                            echo -e "                 $Red  [4]$Normal $BIPurple 500  $Normal"
+                            echo -e "                 $Red  [5]$Normal $BIPurple ALL  $Normal"
+                            echo " "
+                            echo " "
+                            echo " "
+                            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE FILTER FOR STATUS CODE :- \033[0m' filchoice
+                            echo " "
+                            echo " "
+                    
+                            case $filchoice in 
+                                "1")
+                                    filter="200"
+                                ;;
+
+                                "2")
+                                    filter="300"
+                                ;;
+
+                                "3")
+                                    filter="400"
+                                ;;
+
+                                "4")
+                                    filter="500"
+                                ;;
+
+                                "5")
+                                    filter="200-209,300,400,500"
+                                ;;
+
+                                *) 
+                                    # DEFAULT CASE FOR REST 
+                                    echo -e "$BIRed                INVALID OPTION $Normal"
+                                    sleep 0.7
+                                    clear
+                                    echo " "
+                                    dip_banner
+                                    choice
+                                ;; 
+                            esac
+                        
                             # DOMAIN & IP BANNER
                             clear
                             dip_banner
                             echo " "
 
-                            # FUZZING USING CUSTOM WORDLIST
-                            echo -e "$BIGreen  "
-                            ffuf -w $wrdlist_pth -u $domain/FUZZ -mc $filchoice
-                            echo -e "$Normal  "
-                        fi
-                    ;;
+                            # CUSTOM WORDLIST FUZZING 
+                            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mENTER THE PATH OF YOUR WORDLIST :- \033[0m' wrdlist_pth 
+
+                            wrdlist_vld=$(find $wrdlist_pth)
+                            if [[ $? != 0 ]]
+                            then 
+                                echo -e " $BIRed WORDLIST DOES NOT EXIST $Normal"
+                                sleep 0.7
+                                exit 1
+                            else
+                                # DOMAIN & IP BANNER
+                                clear
+                                dip_banner
+                                echo " "
+
+                                # FUZZING USING CUSTOM WORDLIST
+                                echo -e "$BIGreen  "
+                                ffuf -w $wrdlist_pth -u $domain/FUZZ -mc $filchoice
+                                echo -e "$Normal  "
+                            fi
+                        ;;
      
-                    *)
-                        # DEFAULT CASE FOR REST 
-                        echo -e "$BIRed                INVALID OPTION $Normal"
-                        sleep 0.7
-                        clear
-                        echo " "
-                        dip_banner
-                        choice
-                    ;;    
+                        *)
+                            # DEFAULT CASE FOR REST 
+                            echo -e "$BIRed                INVALID OPTION $Normal"
+                            sleep 0.7
+                            clear
+                            echo " "
+                            dip_banner
+                            choice
+                        ;;    
                     esac
                 ;;
 
-            # NO FILTER CASE FOR FFUF
+                # NO FILTER CASE FOR FFUF
 
-            "n")
+                "n")
 
                 case $choice in
 
