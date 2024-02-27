@@ -672,11 +672,13 @@ else
                                         ;; 
                                     esac    
                                 ;;
+                            esac
+                        ;;
                     esac
 
                 ;;
-                
-                   
+
+
                 "2")
 
                     # DOMAIN & IP BANNER
@@ -809,7 +811,8 @@ else
                         ;;      
                     esac
                 ;;
-
+            esac
+        ;;
 
         # FIFTH CASE FOR NIKTO
         "5")
