@@ -435,11 +435,11 @@ else
                             dip_banner
 
                             # FILTER CHOICES
-                            echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
-                            echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
-                            echo -e "                 $Red  [3]$Normal $BIPurple 400  $Normal"
-                            echo -e "                 $Red  [4]$Normal $BIPurple 500  $Normal"
-                            echo -e "                 $Red  [5]$Normal $BIPurple ALL  $Normal"
+                            echo -e "                 $BIRed  [1]$Normal $BIPurple 200 $Normal"
+                            echo -e "                 $BIRed  [2]$Normal $BIPurple 300  $Normal"
+                            echo -e "                 $BIRed  [3]$Normal $BIPurple 400  $Normal"
+                            echo -e "                 $BIRed  [4]$Normal $BIPurple 500  $Normal"
+                            echo -e "                 $BIRed  [5]$Normal $BIPurple ALL  $Normal"
                             echo " "
                             echo " "
                             echo " "
@@ -469,10 +469,13 @@ else
                                 ;;
 
                                 *) 
-                                    # DEFAULT CASE FOR REST
+                                    # DEFAULT CASE FOR REST 
                                     echo -e "$BIRed                INVALID OPTION $Normal"
                                     sleep 0.7
-                                    exit 1
+                                    clear
+                                    echo " "
+                                    dip_banner
+                                    choice
                                 ;; 
                             esac
 
@@ -677,6 +680,8 @@ else
 
                         *) 
                             # DEFAULT CASE FOR REST
+                            echo " "
+                            echo " "
                             echo -e "$BIRed                INVALID OPTION $Normal"
                             sleep 0.7
                             clear
@@ -710,11 +715,11 @@ else
                             dip_banner
 
                             # FILTER CHOICES
-                            echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
-                            echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
-                            echo -e "                 $Red  [3]$Normal $BIPurple 400  $Normal"
-                            echo -e "                 $Red  [4]$Normal $BIPurple 500  $Normal"
-                            echo -e "                 $Red  [5]$Normal $BIPurple ALL  $Normal"
+                            echo -e "                 $BIRed  [1]$Normal $BIPurple 200 $Normal"
+                            echo -e "                 $BIRed  [2]$Normal $BIPurple 300  $Normal"
+                            echo -e "                 $BIRed  [3]$Normal $BIPurple 400  $Normal"
+                            echo -e "                 $BIRed  [4]$Normal $BIPurple 500  $Normal"
+                            echo -e "                 $BIRed  [5]$Normal $BIPurple ALL  $Normal"
                             echo " "
                             echo " "
                             echo " "
