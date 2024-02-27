@@ -196,12 +196,30 @@ else
     echo -e "                   $BIRed[+]$Normal$BIPurple NIKTO $Normal"
     sleep 1.5
 
-    #  WORDLIST PACKAGE
+    #  NIKTO PACKAGE
     nikto_chk=$(which nikto)
     if [[ $? != 0 ]]
     then
         # Insatlling whois if not installed
         pkg=$(sudo apt-get install nikto -y)   
+        if [[ $? != 0 ]]
+        then 
+            echo -e " $BIRed DEPENDENCIES ERROR $Normal "
+            echo " "
+            exit 1
+        fi
+    fi 
+
+
+    echo -e "                   $BIRed[+]$Normal$BIPurple AMASS $Normal"
+    sleep 1.5
+
+    #  AMASS PACKAGE
+    amass_chk=$(which amass)
+    if [[ $? != 0 ]]
+    then
+        # Insatlling whois if not installed
+        pkg=$(sudo apt-get install amass -y)   
         if [[ $? != 0 ]]
         then 
             echo -e " $BIRed DEPENDENCIES ERROR $Normal "
@@ -287,7 +305,8 @@ else
         echo -e "                        $BIRed  [3]$Normal $BIPurple DNSENUM $Normal"
         echo -e "                        $BIRed  [4]$Normal $BIPurple FFUF $Normal"
         echo -e "                        $BIRed  [5]$Normal $BIPurple NIKTO $Normal"
-        echo -e "                        $BIRed  [6]$Normal $BIPurple NMAP $Normal"
+        echo -e "                        $BIRed  [6]$Normal $BIPurple AMASS ENUM $Normal"
+        echo -e "                        $BIRed  [7]$Normal $BIPurple NMAP $Normal"
         echo " "
         echo " "
         echo " "
@@ -719,6 +738,20 @@ else
             nikto -h $domain
             echo -e " $Normal "
         ;;
+
+        # SIXTH CASE FOR AMASS ENUMERATION ===> SUBDOMAIN ENUMERATION
+        "6")
+            # DOMAIN & IP BANNER
+            clear
+            dip_banner
+            echo " "
+            
+            # DISPLAYING SUBDOMAIN INFORMATION
+            echo -e " $BIPurple                      SUBDOMAIN ENUMERATION  $Normal"
+            echo " "
+            echo -e " $BIGreen    "
+            amass enum -d $url
+            echo -e " $Normal "
 
         esac
     }
