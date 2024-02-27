@@ -425,6 +425,10 @@ else
                 "y")
                     # FFUF FILTER
                     clear
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
                     echo " "
                     echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
                     echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
