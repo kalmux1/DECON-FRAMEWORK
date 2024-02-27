@@ -469,7 +469,7 @@ else
                             sleep 0.7
                             exit 1
                         ;; 
-
+                    esac
 
                     case $choice in
 
