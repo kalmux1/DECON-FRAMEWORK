@@ -713,8 +713,8 @@ else
             echo " "
             
             # DISPLAYING NIKTO INFORMATION
-            echo " "
             echo -e " $BIPurple                      NIKTO INFORMATION  $Normal"
+            echo " "
             echo -e " $BIGreen    "
             nikto -h $domain
             echo -e " $Normal "
