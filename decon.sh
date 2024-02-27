@@ -401,8 +401,8 @@ else
 
             # FFUF DIRECTORY FUZZING
             echo " "
-            echo -e "                 $Red  [1]$Normal $BIPurple INBUILD SCAN [ RECOMMENDED] $Normal"
-            echo -e "                 $Red  [2]$Normal $BIPurple CUSTOM SCAN  $Normal"
+            echo -e "                 $BIRed  [1]$Normal $BIPurple INBUILD SCAN [ RECOMMENDED] $Normal"
+            echo -e "                 $BIRed  [2]$Normal $BIPurple CUSTOM SCAN  $Normal"
             echo " "
             echo " "
             echo " "
