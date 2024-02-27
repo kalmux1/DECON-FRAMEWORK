@@ -364,11 +364,11 @@ else
             echo " "
             echo " "
             echo " "
-            read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' scan_choice
+            read -e -p $'\033[1;91m [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' dns_scan_choice
             echo " "
             echo " "
 
-            case $choice in 
+            case $dns_scan_choice in 
 
             "1")
                 clear
@@ -406,13 +406,13 @@ else
             echo " "
             echo " "
             echo " "
-            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION FOR WORDLIST :- \033[0m' choice
+            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION FOR WORDLIST :- \033[0m' ffuf_scan_choice
             echo " "
             echo " "
 
             
 
-            case $scan_choice in
+            case $ffuf_scan_choice in
 
                 "1")
                     # DOMAIN & IP BANNER
@@ -570,8 +570,108 @@ else
                                     choice
                                 ;; 
                             esac
-                            ;;
+                        ;;
 
+                        "n")
+
+                            case $choice in
+
+                                "1")
+                                    # DOMAIN & IP BANNER
+                                    clear
+                                    dip_banner
+                                    echo " "
+                
+                                    # WORDLISTS
+                                    echo -e "               $BIYellow  WORDLISTS               WORDS $Normal"
+                                    echo " "
+                                    echo -e "          $BIRed  [1]$Normal $BIPurple WORDLIST 1.0            142168 $Normal"
+                                    echo -e "          $BIRed  [2]$Normal $BIPurple MEDIUM                  226054 $Normal"
+                                    echo -e "          $BIRed  [3]$Normal $BIPurple SMALL                   87912 $Normal"
+                                    echo -e "          $BIRed  [4]$Normal $BIPurple LOWECASE MEDIUM         207698 $Normal"
+                                    echo -e "          $BIRed  [5]$Normal $BIPurple LOWECASE SMALL          81698 $Normal"
+                                    echo " "
+                                    echo " "
+                                    echo " "
+                                    read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' wrdlist
+                                    echo " "
+                                    echo " "
+
+                                    # INBUID WORDLIST FUZZING 
+
+                                    case $wrdlist in 
+
+                                        "1")
+                                            # DOMAIN & IP BANNER
+                                            clear
+                                            dip_banner
+                                            echo " "
+
+                                            # WORDLIST 1.0
+                                            echo -e "$BIGreen  "
+                                            ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain/FUZZ
+                                            echo -e "$Normal  "
+                                        ;;
+
+                                        "2")
+                                            # DOMAIN & IP BANNER
+                                            clear
+                                            dip_banner
+                                            echo " "
+
+                                            # WORDLIST MEDIUM
+                                            echo -e "$BIGreen  "
+                                            ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $domain/FUZZ
+                                            echo -e "$Normal  "
+                                        ;;
+
+                                       "3")
+                                            # DOMAIN & IP BANNER
+                                            clear
+                                            dip_banner
+                                            echo " "
+
+                                            # WORDLIST SMALL
+                                            echo -e "$BIGreen  "
+                                            ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u $domain/FUZZ
+                                            echo -e "$Normal  "
+                                        ;;
+
+                                        "4")
+                                            # DOMAIN & IP BANNER
+                                            clear
+                                            dip_banner
+                                            echo " "
+
+                                            # WORDLIST LOWERCASE MEDIUM
+                                            echo -e "$BIGreen  "
+                                            ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -u $domain/FUZZ
+                                            echo -e "$Normal  "
+                                        ;;
+
+                                        "5")
+                                            # DOMAIN & IP BANNER
+                                            clear
+                                            dip_banner
+                                            echo " "
+
+                                            # WORDLIST LOWERCASE SMALL
+                                            echo -e "$BIGreen  "
+                                            ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -u $domain/FUZZ
+                                            echo -e "$Normal  "
+                                        ;;
+     
+                                       *) 
+                                            # DEFAULT CASE FOR REST
+                                            echo -e "$BIRed                INVALID OPTION $Normal"
+                                            sleep 0.7
+                                            clear
+                                           echo " "
+                                            dip_banner
+                                            choice
+                                        ;; 
+                                    esac    
+                                ;;
                 "2")
 
                     # DOMAIN & IP BANNER
@@ -665,6 +765,34 @@ else
                             fi
                         ;;
      
+                        "n")
+                            # DOMAIN & IP BANNER
+                            clear
+                            dip_banner
+                            echo " "
+
+                            # CUSTOM WORDLIST FUZZING 
+                            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mENTER THE PATH OF YOUR WORDLIST :- \033[0m' wrdlist_pth
+
+                            wrdlist_vld=$(find $wrdlist_pth)
+                            if [[ $? != 0 ]]
+                            then 
+                                echo -e " $BIRed WORDLIST DOES NOT EXIST $Normal"
+                                sleep 0.7
+                                exit 1
+                            else
+                                # DOMAIN & IP BANNER
+                                clear
+                                dip_banner
+                                echo " "
+
+                                # FUZZING USING CUSTOM WORDLIST
+                                echo -e "$BIGreen  "
+                                ffuf -w $wrdlist_pth -u $domain/FUZZ
+                                echo -e "$Normal  "
+                            fi
+                        ;;
+     
                         *)
                             # DEFAULT CASE FOR REST 
                             echo -e "$BIRed                INVALID OPTION $Normal"
@@ -673,165 +801,10 @@ else
                             echo " "
                             dip_banner
                             choice
-                        ;;    
+                        ;;      
                     esac
                 ;;
 
-                # NO FILTER CASE FOR FFUF
-
-                "n")
-
-                case $choice in
-
-                    "1")
-                        # DOMAIN & IP BANNER
-                            clear
-                            dip_banner
-                            echo " "
-                
-                            # WORDLISTS
-                            echo -e "               $BIYellow  WORDLISTS               WORDS $Normal"
-                            echo " "
-                            echo -e "          $BIRed  [1]$Normal $BIPurple WORDLIST 1.0            142168 $Normal"
-                            echo -e "          $BIRed  [2]$Normal $BIPurple MEDIUM                  226054 $Normal"
-                            echo -e "          $BIRed  [3]$Normal $BIPurple SMALL                   87912 $Normal"
-                            echo -e "          $BIRed  [4]$Normal $BIPurple LOWECASE MEDIUM         207698 $Normal"
-                            echo -e "          $BIRed  [5]$Normal $BIPurple LOWECASE SMALL          81698 $Normal"
-                            echo " "
-                            echo " "
-                            echo " "
-                            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' wrdlist
-                            echo " "
-                            echo " "
-
-                            # INBUID WORDLIST FUZZING 
-
-                            case $wrdlist in 
-
-                                "1")
-                                    # DOMAIN & IP BANNER
-                                    clear
-                                    dip_banner
-                                    echo " "
-
-                                    # WORDLIST 1.0
-                                    echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain/FUZZ
-                                    echo -e "$Normal  "
-                                ;;
-
-                                "2")
-                                    # DOMAIN & IP BANNER
-                                    clear
-                                    dip_banner
-                                    echo " "
-
-                                    # WORDLIST MEDIUM
-                                    echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $domain/FUZZ
-                                    echo -e "$Normal  "
-                                ;;
-
-                                "3")
-                                    # DOMAIN & IP BANNER
-                                    clear
-                                    dip_banner
-                                    echo " "
-
-                                    # WORDLIST SMALL
-                                    echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u $domain/FUZZ
-                                    echo -e "$Normal  "
-                                ;;
-
-                                "4")
-                                    # DOMAIN & IP BANNER
-                                    clear
-                                    dip_banner
-                                    echo " "
-
-                                    # WORDLIST LOWERCASE MEDIUM
-                                    echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -u $domain/FUZZ
-                                    echo -e "$Normal  "
-                                ;;
-
-                                "5")
-                                    # DOMAIN & IP BANNER
-                                    clear
-                                    dip_banner
-                                    echo " "
-
-                                    # WORDLIST LOWERCASE SMALL
-                                    echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -u $domain/FUZZ
-                                    echo -e "$Normal  "
-                                ;;
-     
-                                *) 
-                                    # DEFAULT CASE FOR REST
-                                    echo -e "$BIRed                INVALID OPTION $Normal"
-                                    sleep 0.7
-                                    clear
-                                    echo " "
-                                    dip_banner
-                                    choice
-                                ;; 
-                            esac
-                
-                    ;;
-
-                    "2")
-                        # DOMAIN & IP BANNER
-                        clear
-                        dip_banner
-                        echo " "
-
-                        # CUSTOM WORDLIST FUZZING 
-                        read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mENTER THE PATH OF YOUR WORDLIST :- \033[0m' wrdlist_pth
-
-                        wrdlist_vld=$(find $wrdlist_pth)
-                        if [[ $? != 0 ]]
-                        then 
-                            echo -e " $BIRed WORDLIST DOES NOT EXIST $Normal"
-                            sleep 0.7
-                            exit 1
-                        else
-                            # DOMAIN & IP BANNER
-                            clear
-                            dip_banner
-                            echo " "
-
-                            # FUZZING USING CUSTOM WORDLIST
-                            echo -e "$BIGreen  "
-                            ffuf -w $wrdlist_pth -u $domain/FUZZ
-                            echo -e "$Normal  "
-                        fi
-                    ;;
-     
-                    *)
-                        # DEFAULT CASE FOR REST 
-                        echo -e "$BIRed                INVALID OPTION $Normal"
-                        sleep 0.7
-                        clear
-                        echo " "
-                        dip_banner
-                        choice
-                    ;;    
-                esac
-                ;;
-
-                *)
-                    # DEFAULT CASE FOR REST 
-                    echo -e "$BIRed                INVALID OPTION $Normal"
-                    sleep 0.7
-                    clear
-                    echo " "
-                    dip_banner
-                    choice
-                ;;    
-            esac
-        ;;
 
         # FIFTH CASE FOR NIKTO
         "5")
@@ -881,6 +854,7 @@ else
             choice
         ;;    
         esac
+        
     }
     # MAIN FUNCTION CALLING
     dip_banner # BANNER FOR DOMAIN NAME AND IP ADDRESS
