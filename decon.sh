@@ -432,9 +432,9 @@ else
                     # FILTER CHOICES
                     echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
                     echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
-                    echo -e "                 $Red  [2]$Normal $BIPurple 400  $Normal"
-                    echo -e "                 $Red  [2]$Normal $BIPurple 500  $Normal"
-                    echo -e "                 $Red  [2]$Normal $BIPurple ALL  $Normal"
+                    echo -e "                 $Red  [3]$Normal $BIPurple 400  $Normal"
+                    echo -e "                 $Red  [4]$Normal $BIPurple 500  $Normal"
+                    echo -e "                 $Red  [5]$Normal $BIPurple ALL  $Normal"
                     echo " "
                     echo " "
                     echo " "
@@ -442,6 +442,34 @@ else
                     echo " "
                     echo " "
                     
+                    case $filchoice in 
+                        "1")
+                            filter="200"
+                        ;;
+
+                        "2")
+                            filter="300"
+                        ;;
+
+                        "3")
+                            filter="400"
+                        ;;
+
+                        "4")
+                            filter="500"
+                        ;;
+
+                        "5")
+                            filter="200-209,300,400,500"
+                        ;;
+
+                        *) 
+                            # DEFAULT CASE FOR REST
+                            echo -e "$BIRed                INVALID OPTION $Normal"
+                            sleep 0.7
+                            exit 1
+                        ;; 
+
 
                     case $choice in
 
@@ -478,7 +506,7 @@ else
 
                                     # WORDLIST 1.0
                                     echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain/FUZZ -mc $filchoice
+                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -u $domain/FUZZ -mc $filter
                                     echo -e "$Normal  "
                                 ;;
 
@@ -490,7 +518,7 @@ else
 
                                     # WORDLIST MEDIUM
                                     echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $domain/FUZZ -mc $filchoice
+                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $domain/FUZZ -mc $filter
                                     echo -e "$Normal  "
                                 ;;
 
@@ -502,7 +530,7 @@ else
 
                                     # WORDLIST SMALL
                                     echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u $domain/FUZZ -mc $filchoice
+                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u $domain/FUZZ -mc $filter
                                     echo -e "$Normal  "
                                 ;;
 
@@ -514,7 +542,7 @@ else
 
                                     # WORDLIST LOWERCASE MEDIUM
                                     echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -u $domain/FUZZ -mc $filchoice
+                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -u $domain/FUZZ -mc $filter
                                     echo -e "$Normal  "
                                 ;;
 
@@ -526,7 +554,7 @@ else
 
                                     # WORDLIST LOWERCASE SMALL
                                     echo -e "$BIGreen  "
-                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -u $domain/FUZZ -mc $filchoice
+                                    ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -u $domain/FUZZ -mc $filter
                                     echo -e "$Normal  "
                                 ;;
      
