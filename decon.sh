@@ -380,7 +380,7 @@ else
 
             # FILTER CHOOSING OPTION - YES OR NO 
             echo " "
-            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mDO YOU WANT TO USE FILTERS FOR STATUS CODES [ Y | N ]:-  :- \033[0m' fil_opt
+            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mDO YOU WANT TO USE FILTERS FOR STATUS CODES [ y | n ]:-  :- \033[0m' fil_opt
 
             case $fil_opt in 
 
