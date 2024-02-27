@@ -359,8 +359,8 @@ else
            
 
             # DNSENUM
-            echo -e "                        $Red  [1]$Normal $BIPurple QUICK SCAN [ RECOMMENDED] $Normal"
-            echo -e "                        $Red  [2]$Normal $BIPurple AGGRESSIVE SCAN  $Normal"
+            echo -e "                        $BIRed  [1]$Normal $BIPurple QUICK SCAN [ RECOMMENDED] $Normal"
+            echo -e "                        $BIRed  [2]$Normal $BIPurple AGGRESSIVE SCAN  $Normal"
             echo " "
             echo " "
             echo " "
