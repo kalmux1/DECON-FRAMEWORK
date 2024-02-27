@@ -424,6 +424,7 @@ else
 
                 "y")
                     # FFUF FILTER
+                    clear
                     echo " "
                     echo -e "                 $Red  [1]$Normal $BIPurple 200 $Normal"
                     echo -e "                 $Red  [2]$Normal $BIPurple 300  $Normal"
@@ -433,7 +434,7 @@ else
                     echo " "
                     echo " "
                     echo " "
-                    read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION FOR WORDLIST :- \033[0m' filchoice
+                    read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE FILTER FOR STATUS CODE :- \033[0m' filchoice
                     echo " "
                     echo " "
                     
@@ -457,7 +458,7 @@ else
                             echo " "
                             echo " "
                             echo " "
-                            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE OPTION :- \033[0m' wrdlist
+                            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE WORDLIST :- \033[0m' wrdlist
                             echo " "
                             echo " "
 
