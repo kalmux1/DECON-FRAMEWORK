@@ -507,7 +507,6 @@ else
                                     # DOMAIN & IP BANNER
                                     clear
                                     dip_banner
-                                    echo " "
 
                                     # WORDLIST 1.0
                                     echo -e "$BIGreen  "
@@ -519,7 +518,6 @@ else
                                     # DOMAIN & IP BANNER
                                     clear
                                     dip_banner
-                                    echo " "
 
                                     # WORDLIST MEDIUM
                                     echo -e "$BIGreen  "
@@ -531,7 +529,6 @@ else
                                     # DOMAIN & IP BANNER
                                     clear
                                     dip_banner
-                                    echo " "
 
                                     # WORDLIST SMALL
                                     echo -e "$BIGreen  "
@@ -543,7 +540,6 @@ else
                                     # DOMAIN & IP BANNER
                                     clear
                                     dip_banner
-                                    echo " "
 
                                     # WORDLIST LOWERCASE MEDIUM
                                     echo -e "$BIGreen  "
@@ -555,7 +551,6 @@ else
                                     # DOMAIN & IP BANNER
                                     clear
                                     dip_banner
-                                    echo " "
 
                                     # WORDLIST LOWERCASE SMALL
                                     echo -e "$BIGreen  "
@@ -608,7 +603,6 @@ else
                                             # DOMAIN & IP BANNER
                                             clear
                                             dip_banner
-                                            echo " "
 
                                             # WORDLIST 1.0
                                             echo -e "$BIGreen  "
@@ -620,7 +614,6 @@ else
                                             # DOMAIN & IP BANNER
                                             clear
                                             dip_banner
-                                            echo " "
 
                                             # WORDLIST MEDIUM
                                             echo -e "$BIGreen  "
@@ -632,7 +625,6 @@ else
                                             # DOMAIN & IP BANNER
                                             clear
                                             dip_banner
-                                            echo " "
 
                                             # WORDLIST SMALL
                                             echo -e "$BIGreen  "
@@ -644,7 +636,6 @@ else
                                             # DOMAIN & IP BANNER
                                             clear
                                             dip_banner
-                                            echo " "
 
                                             # WORDLIST LOWERCASE MEDIUM
                                             echo -e "$BIGreen  "
@@ -656,7 +647,6 @@ else
                                             # DOMAIN & IP BANNER
                                             clear
                                             dip_banner
-                                            echo " "
 
                                             # WORDLIST LOWERCASE SMALL
                                             echo -e "$BIGreen  "
@@ -777,7 +767,6 @@ else
                                 # DOMAIN & IP BANNER
                                 clear
                                 dip_banner
-                                echo " "
 
                                 # FUZZING USING CUSTOM WORDLIST
                                 echo -e "$BIGreen  "
@@ -805,7 +794,6 @@ else
                                 # DOMAIN & IP BANNER
                                 clear
                                 dip_banner
-                                echo " "
 
                                 # FUZZING USING CUSTOM WORDLIST
                                 echo -e "$BIGreen  "
@@ -868,7 +856,7 @@ else
             echo -e " $Normal "
         ;;
 
-        # SEVENTH CASE FOR NS LOOKUP
+        # SEVENTH CASE FOR NMAP
         "7")
             # DOMAIN & IP BANNER
             clear
