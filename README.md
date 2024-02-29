@@ -44,9 +44,9 @@ OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
       $ sudo bash decon.sh
   ```
 
-## Screenshots
+## DEMO
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![TOOL DEMO](https://github.com/kalmux1/DECON/blob/main/assest/DECON.mp4)
 
 ## Demo
 
