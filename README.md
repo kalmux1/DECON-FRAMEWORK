@@ -12,7 +12,7 @@ The decon-framework comprises a diverse array of tools, including but not limite
 
 ## AVAILABLE ON
 
-**KALI LINUX**
+**> KALI LINUX**
 
 ## Installation
 
