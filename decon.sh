@@ -888,7 +888,11 @@ else
                     echo " "
 
                     # NORMAL NMAP SCAN
+                    echo -e " $BIPurple                      NORMAL SCAN  $Normal"
+                    echo " "
+                    echo -e " $BIGreen    "
                     nmap $IP
+                    echo -e " $Normal "
                 ;;
 
                 "2")
@@ -898,7 +902,11 @@ else
                     echo " "
 
                     # FAST NMAP SCAN
+                    echo -e " $BIPurple                      FAST SCAN  $Normal"
+                    echo " "
+                    echo -e " $BIGreen    "
                     nmap -F $IP
+                    echo -e " $Normal "
                 ;;
 
                 "3")
@@ -908,7 +916,11 @@ else
                     echo " "
 
                     # OS DEDECTION 
+                    echo -e " $BIPurple                      OS DEDECTION  $Normal"
+                    echo " "
+                    echo -e " $BIGreen    "
                     nmap -A -O $IP
+                    echo -e " $Normal "
                 ;;
 
                 "4")
@@ -918,7 +930,11 @@ else
                     echo " "
 
                     # SERVICE VERSION DEDECTION
+                    echo -e " $BIPurple                      SERVICE VERSION DEDECTION  $Normal"
+                    echo " "
+                    echo -e " $BIGreen    "
                     nmap -sV $IP
+                    echo -e " $Normal "
                 ;;
 
                 "5")
@@ -928,7 +944,11 @@ else
                     echo " "
 
                     # SLEATH MODE 
+                    echo -e " $BIPurple                      SLEATH MODE SCANNING  $Normal"
+                    echo " "
+                    echo -e " $BIGreen    "
                     nmap -sS $IP
+                    echo -e " $Normal "
                 ;;
 
                 "6")
@@ -938,7 +958,11 @@ else
                     echo " "
 
                     # FIREWALL DEDECTION 
+                    echo -e " $BIPurple                      FIREWALL DEDECTION  $Normal"
+                    echo " "
+                    echo -e " $BIGreen    "
                     nmap -sA $IP
+                    echo -e " $Normal "
                 ;;
 
                 "7")
@@ -948,7 +972,11 @@ else
                     echo " "
 
                     # SCAN WITHOUT HOST DESCOVERY
+                    echo -e " $BIPurple                      SCANNING WITHOUT HOST DESCOVERY  $Normal"
+                    echo " "
+                    echo -e " $BIGreen    "
                     nmap -Pn $IP
+                    echo -e " $Normal "
                 ;;
 
                 "8")
@@ -956,9 +984,13 @@ else
                     clear
                     dip_banner
                     echo " "
-                    
+
                     # FULL SCAN 65535 PORTS
+                    echo -e " $BIPurple                      FULL SCAN OF 65535 PORTS  $Normal"
+                    echo " "
+                    echo -e " $BIGreen    "
                     nmap -p- $IP
+                    echo -e " $Normal "
                 ;;
 
                 *)
