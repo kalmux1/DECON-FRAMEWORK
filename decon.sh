@@ -862,6 +862,75 @@ else
             clear
             dip_banner
             echo " "
+
+            # FILTER CHOICES
+            echo -e "                 $BIRed  [1]$Normal $BIPurple NORMAL SCAN $Normal"
+            echo -e "                 $BIRed  [2]$Normal $BIPurple FAST SCAN  $Normal"
+            echo -e "                 $BIRed  [3]$Normal $BIPurple OS DEDECTION  $Normal"
+            echo -e "                 $BIRed  [4]$Normal $BIPurple SERVICE VERSION  $Normal"
+            echo -e "                 $BIRed  [5]$Normal $BIPurple SLEATH MODE  $Normal"
+            echo -e "                 $BIRed  [5]$Normal $BIPurple FIREWALL DEDECTION  $Normal"
+            echo -e "                 $BIRed  [5]$Normal $BIPurple SCAN WITHOUT HOST DESCOVERY $Normal"
+            echo -e "                 $BIRed  [5]$Normal $BIPurple FULL SCAN   $Normal"
+            echo " "
+            echo " "
+            echo " "
+            read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE SCANNING METHOD :- \033[0m' scanchoice
+            echo " "
+            echo " "
+
+            case $scanchoice in 
+
+                "1")
+                    # NORMAL NMAP SCAN
+                    nmap $IP
+                ;;
+
+                "2")
+                    # FAST NMAP SCAN
+                    nmap -F $IP
+                ;;
+
+                "3")
+                    # OS DEDECTION 
+                    nmap -A -O $IP
+                ;;
+
+                "4")
+                    # SERVICE VERSION DEDECTION
+                    nmap -sV $IP
+                ;;
+
+                "5")
+                    # SLEATH MODE 
+                    nmap -sS $IP
+                ;;
+
+                "6")
+                    # FIREWALL DEDECTION 
+                    nmap -sA $IP
+                ;;
+
+                "7")
+                    # SCAN WITHOUT HOST DESCOVERY
+                    nmap -Pn $IP
+                ;;
+
+                "8")
+                    # FULL SCAN 65535 PORTS
+                    nmap -p- $IP
+                ;;
+
+                *)
+                    # DEFAULT CASE FOR REST 
+                    echo -e "$BIRed                INVALID OPTION $Normal"
+                    sleep 0.7
+                    clear
+                    echo " "
+                    dip_banner
+                    choice
+                ;;   
+            esac
         ;;
 
         *)
