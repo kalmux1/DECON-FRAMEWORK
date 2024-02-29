@@ -46,7 +46,7 @@ OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
 ## DEMO
 
-https://github.com/kalmux1/DECON/assets/152981225/3f5de392-d7c4-4ef2-b3ed-b8173751d063
+![DECON-FRAMEWORK](https://github.com/kalmux1/DECON/assets/152981225/3a14bc48-a622-46bb-ae1e-455c5fcf82e6)
 
 ## Demo
 
