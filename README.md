@@ -14,7 +14,7 @@ The decon-framework comprises a diverse array of tools, including but not limite
 
 **_KALI LINUX_**
 
-## Installation
+## INSTALLATION
 
 OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
@@ -48,6 +48,6 @@ OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
 ![DECON-FRAMEWORK](https://github.com/kalmux1/DECON/assets/152981225/3a14bc48-a622-46bb-ae1e-455c5fcf82e6)
 
-## Support
+## CONTACT
 
 For support, email kal.mux.cyber@gmail.com
