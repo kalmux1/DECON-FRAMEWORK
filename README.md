@@ -46,7 +46,7 @@ OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
 ## DEMO
 
-<iframe width="560" height="315" src="https://drive.google.com/file/d/1j1xGR1adGnzps7T1_l1mi4zD0l_xLa4S/view?usp=drive_link" frameborder="0" allowfullscreen></iframe>
+https://github.com/kalmux1/DECON/assets/152981225/3f5de392-d7c4-4ef2-b3ed-b8173751d063
 
 ## Demo
 
