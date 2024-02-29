@@ -882,41 +882,81 @@ else
             case $scanchoice in 
 
                 "1")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
                     # NORMAL NMAP SCAN
                     nmap $IP
                 ;;
 
                 "2")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
                     # FAST NMAP SCAN
                     nmap -F $IP
                 ;;
 
                 "3")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
                     # OS DEDECTION 
                     nmap -A -O $IP
                 ;;
 
                 "4")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
                     # SERVICE VERSION DEDECTION
                     nmap -sV $IP
                 ;;
 
                 "5")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
                     # SLEATH MODE 
                     nmap -sS $IP
                 ;;
 
                 "6")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
                     # FIREWALL DEDECTION 
                     nmap -sA $IP
                 ;;
 
                 "7")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+
                     # SCAN WITHOUT HOST DESCOVERY
                     nmap -Pn $IP
                 ;;
 
                 "8")
+                    # DOMAIN & IP BANNER
+                    clear
+                    dip_banner
+                    echo " "
+                    
                     # FULL SCAN 65535 PORTS
                     nmap -p- $IP
                 ;;
