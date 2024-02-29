@@ -46,7 +46,7 @@ OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
 ## DEMO
 
-![TOOL DEMO](https://github.com/kalmux1/DECON/blob/main/assest/DECON.mp4)
+![TOOL DEMO](https://drive.google.com/file/d/1j1xGR1adGnzps7T1_l1mi4zD0l_xLa4S/view?usp=drive_link)
 
 ## Demo
 
