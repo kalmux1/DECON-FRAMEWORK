@@ -137,7 +137,7 @@ else
             exit 1
         fi
     fi 
-
+                                                                                                                                                                                                                                                                                                        # CODED BY NITIN JAISWAL AKA KALMUX
 
     echo -e "                   $BIRed[+]$Normal$BIPurple WHATWEB $Normal"
     sleep 1.5 
@@ -230,7 +230,7 @@ else
 
     sleep 2
     clear
-
+                                                                                                                                                                                                                                                                                                                                                                                        # CODED BY NITIN JAISWAL AKA KALMUX
 
     # DOMAIN NAME VALIDATION FUNCTION
     dvld()
@@ -283,7 +283,7 @@ else
     
     # IP EXTRACTION
     IP=$(awk 'NR==1{print $3}' asset/log.txt | sed 's/[\(\)]//g')
-
+    # CODED BY NITIN JAISWAL AKA KALMUX
 
     # DOMAIN & IP TOP BANNER
     dip_banner()
@@ -348,7 +348,7 @@ else
             echo -e " $BIGreen    "
             cat asset/webdel.txt
             echo -e " $Normal "
-
+            # CODED BY NITIN JAISWAL AKA KALMUX
         ;;
 
         # THIRD CASE FOR DNSENUM
@@ -391,7 +391,7 @@ else
             esac
 
         ;;
-
+                                                                                                                                                                                                                                                                                                # CODED BY NITIN JAISWAL AKA KALMUX
         # FOURTH CASE FOR FFUF
         "4")
             # DOMAIN & IP BANNER
@@ -483,7 +483,7 @@ else
                             clear
                             dip_banner
                             echo " "
-                
+                                                                                                                                                                                                                                                                                                                                                # CODED BY NITIN JAISWAL AKA KALMUX
                             # WORDLISTS
                             echo -e "               $BIYellow  WORDLISTS               WORDS $Normal"
                             echo " "
@@ -620,7 +620,7 @@ else
                                             ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $domain/FUZZ
                                             echo -e "$Normal  "
                                         ;;
-
+                                                                                            # CODED BY NITIN JAISWAL AKA KALMUX
                                        "3")
                                             # DOMAIN & IP BANNER
                                             clear
@@ -716,7 +716,7 @@ else
                             read -e -p $'\033[1;91m      [+]\033[0m \033[1;94mCHOOSE ONE FILTER FOR STATUS CODE :- \033[0m' filchoice
                             echo " "
                             echo " "
-                    
+                                                                        # CODED BY NITIN JAISWAL AKA KALMUX
                             case $filchoice in 
                                 "1")
                                     filter="200"
@@ -774,7 +774,7 @@ else
                                 echo -e "$Normal  "
                             fi
                         ;;
-     
+                                                                                                    # CODED BY NITIN JAISWAL AKA KALMUX
                         "n")
                             # DOMAIN & IP BANNER
                             clear
@@ -862,7 +862,7 @@ else
             clear
             dip_banner
             echo " "
-
+                                                    # CODED BY NITIN JAISWAL AKA KALMUX
             # FILTER CHOICES
             echo -e "                 $BIRed  [1]$Normal $BIPurple NORMAL SCAN $Normal"
             echo -e "                 $BIRed  [2]$Normal $BIPurple FAST SCAN  $Normal"
@@ -950,7 +950,7 @@ else
                     nmap -sS $IP
                     echo -e " $Normal "
                 ;;
-
+                                            # CODED BY NITIN JAISWAL AKA KALMUX
                 "6")
                     # DOMAIN & IP BANNER
                     clear
@@ -1021,3 +1021,4 @@ else
     dip_banner # BANNER FOR DOMAIN NAME AND IP ADDRESS
     choice  # calling choice function
 fi
+                                # CODED BY NITIN JAISWAL AKA KALMUX
