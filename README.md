@@ -19,7 +19,7 @@ The decon-framework comprises a diverse array of tools, including but not limite
 OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
 ```bash
-    $ sudo apt-get update && sudo apt-get upgrade -y
+    $ 'sudo apt-get update && sudo apt-get upgrade -y'
 ```
 
 ```bash
