@@ -24,23 +24,23 @@ OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
   ```
 - CLONE DECON-FRAMEWORK IN YOUR TERMINAL
 
-  ```bash
+  ```
       $ git clone https://github.com/kalmux1/DECON.git
   ```
 
 - CHANGE DIRECTORY INTO DECON
 
-  ```bash
+  ```
       $ cd DECON
   ```
 
 - GIVE EXECUTABLE PERMISSION TO THE BASH FILE
-  ```bash
+  ```
       $ sudo chmod +x decon.sh
   ```
 - EXECUTE THE MAIN TOOL FILE
 
-  ```bash
+  ```
       $ sudo bash decon.sh
   ```
 
