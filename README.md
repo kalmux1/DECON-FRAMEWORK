@@ -20,7 +20,7 @@ OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
 - UPDATE AND UPGRADE YOUR KALI
   ```
-   $ sudo apt-get update && sudo apt-get upgrade -y
+      $ sudo apt-get update && sudo apt-get upgrade -y
   ```
 - CLONE DECON-FRAMEWORK IN YOUR TERMINAL
 
