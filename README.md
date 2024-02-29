@@ -18,25 +18,31 @@ The decon-framework comprises a diverse array of tools, including but not limite
 
 OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
-```bash
-    $ 'sudo apt-get update && sudo apt-get upgrade -y'
-```
+- UPDATE AND UPGRADE YOUR KALI
+  ```
+   $ sudo apt-get update && sudo apt-get upgrade -y
+  ```
+- CLONE DECON-FRAMEWORK IN YOUR TERMINAL
 
-```bash
-    $ git clone https://github.com/kalmux1/DECON.git
-```
+  ```bash
+      $ git clone https://github.com/kalmux1/DECON.git
+  ```
 
-```bash
-    $ cd DECON
-```
+- CHANGE DIRECTORY INTO DECON
 
-```bash
-    $ sudo chmod +x decon.sh
-```
+  ```bash
+      $ cd DECON
+  ```
 
-```bash
-    $ sudo bash decon.sh
-```
+- GIVE EXECUTABLE PERMISSION TO THE BASH FILE
+  ```bash
+      $ sudo chmod +x decon.sh
+  ```
+- EXECUTE THE MAIN TOOL FILE
+
+  ```bash
+      $ sudo bash decon.sh
+  ```
 
 ## Screenshots
 
