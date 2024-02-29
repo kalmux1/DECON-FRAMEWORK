@@ -48,10 +48,6 @@ OPEN YOUR TERMINAL & RUN THE FOLLOWING COMMANDS
 
 ![DECON-FRAMEWORK](https://github.com/kalmux1/DECON/assets/152981225/3a14bc48-a622-46bb-ae1e-455c5fcf82e6)
 
-## Demo
-
-Insert gif or link to demo
-
 ## Support
 
 For support, email kal.mux.cyber@gmail.com
