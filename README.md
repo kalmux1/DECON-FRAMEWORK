@@ -1,6 +1,6 @@
 # DECON-FRAMEWORK
 
-The decon-framework comprises a diverse array of tools, including but not limited to nmap, ffus, dnsenum, whois, nikto, amass, and whatweb. These tools collectively serve to furnish comprehensive information pertaining to a domain name. They play a pivotal role during the reconnaissance phase, aiding in bug hunting, and facilitating penetration testing endeavors. Through their combined functionality, they enable users to gather essential data, analyze potential vulnerabilities, and execute thorough assessments of target domains.
+The open-source decon-framework comprises a diverse array of tools, including but not limited to nmap, ffus, dnsenum, whois, nikto, amass, and whatweb. These open-source tools collectively serve to furnish comprehensive information pertaining to a domain name. They play a pivotal role during the reconnaissance phase, aiding in bug hunting, and facilitating penetration testing endeavors. Through their combined functionality, they enable users to gather essential data, analyze potential vulnerabilities, and execute thorough assessments of target domains.
 
 ## LICENSE
 
